@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" %>
+
+<!-- Scripts -->
+<script src="js/googleMapApi.js"></script>
+<script src="js/infobox.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/bxslider.js"></script>
+<script src="js/marquee.js"></script>
+<script src="js/nouislider.js"></script>
+<script src="js/modernizr.js"></script>
+<script src="js/imagesloaded.js"></script>
+<script src="js/smooth-scroll.js"></script>
+<script src="js/owl-carousel.js"></script>
+<script src="js/isotope.js"></script>
+<script src="js/theia.js"></script>
+<script src="js/lightbox.js"></script>
+<script src="js/options.js"></script>
+<script src="js/locations.js"></script>

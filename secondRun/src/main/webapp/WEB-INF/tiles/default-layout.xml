@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+ 
+<tiles-definitions>
+
+	<definition name="layouts-tiles" 							template="/WEB-INF/jsp/egovframework/example/cmmn/layout/dashboardLayout.jsp">
+	  	<put-attribute name="header"    						value="/WEB-INF/jsp/egovframework/example/cmmn/layout/header.jsp" />
+	  	<put-attribute name="nav"    							value="/WEB-INF/jsp/egovframework/example/cmmn/layout/nav.jsp" />
+	  	<put-attribute name="top"    							value="/WEB-INF/jsp/egovframework/example/cmmn/layout/top.jsp" />
+	  	<put-attribute name="content"   						value="" />
+	  	<put-attribute name="footer"    						value="/WEB-INF/jsp/egovframework/example/cmmn/layout/footer.jsp" />
+	  	<put-attribute name="loginFormPopup"					value="/WEB-INF/jsp/egovframework/example/cmmn/layout/loginFormPopup.jsp" />
+	</definition>
+	
+	<definition name="dashboard/dashboard.tiles" 				extends="layouts-tiles">
+	  	<put-attribute name="content"  							value="/WEB-INF/jsp/egovframework/example/dashboard/dashboard.jsp" />
+	</definition>
+	
+	<definition name="board/*.tiles" 							extends="layouts-tiles">
+	  	<put-attribute name="content"   						value="/WEB-INF/jsp/egovframework/example/board/{1}.jsp" />
+	</definition>
+	
+	<definition name="customerSupport/*.tiles" 					extends="layouts-tiles">
+	  	<put-attribute name="content"   						value="/WEB-INF/jsp/egovframework/example/customerSupport/{1}.jsp" />
+	</definition>
+	
+	<definition name="realtyNews/*.tiles" 						extends="layouts-tiles">
+	  	<put-attribute name="content"   						value="/WEB-INF/jsp/egovframework/example/realtyNews/{1}.jsp" />
+	</definition>
+	
+	<definition name="notice/*.tiles" 							extends="layouts-tiles">
+	  	<put-attribute name="content"   						value="/WEB-INF/jsp/egovframework/example/notice/{1}.jsp" />
+	</definition>
+	
+	<definition name="company/*.tiles" 							extends="layouts-tiles">
+	  	<put-attribute name="content"   						value="/WEB-INF/jsp/egovframework/example/company/{1}.jsp" />
+	</definition>
+	
+	<definition name="myPage-tiles"								template="/WEB-INF/jsp/egovframework/example/cmmn/layout/myPageLayout.jsp">
+        <put-attribute name="header"							value="/WEB-INF/jsp/egovframework/example/cmmn/layout/header.jsp" />
+        <put-attribute name="nav"								value="/WEB-INF/jsp/egovframework/example/cmmn/layout/nav.jsp" />
+        <put-attribute name="top"								value="/WEB-INF/jsp/egovframework/example/cmmn/layout/top.jsp" />
+        <put-attribute name="myPageSideMenu"					value="/WEB-INF/jsp/egovframework/example/cmmn/layout/myPageSideMenu.jsp" />
+        <put-attribute name="content"							value="" />
+        <put-attribute name="footer"							value="/WEB-INF/jsp/egovframework/example/cmmn/layout/footer.jsp" />
+   	</definition>
+   	
+  	<definition name="myPage/*.tiles"    						extends="myPage-tiles">
+        <put-attribute name="content"							value="/WEB-INF/jsp/egovframework/example/myPage/{1}.jsp" />
+  	</definition>
+	
+	<definition name="sales-tiles"								template="/WEB-INF/jsp/egovframework/example/cmmn/layout/salesLayout.jsp">
+        <put-attribute name="header"							value="/WEB-INF/jsp/egovframework/example/cmmn/layout/header.jsp" />
+        <put-attribute name="nav"								value="/WEB-INF/jsp/egovframework/example/cmmn/layout/nav.jsp" />
+        <put-attribute name="top"								value="/WEB-INF/jsp/egovframework/example/cmmn/layout/top.jsp" />
+        <put-attribute name="salesManagementSideMenu"			value="/WEB-INF/jsp/egovframework/example/cmmn/layout/salesManagementSideMenu.jsp" />
+        <put-attribute name="content"							value="" />
+        <put-attribute name="footer"							value="/WEB-INF/jsp/egovframework/example/cmmn/layout/footer.jsp" />
+   	</definition>
+   	
+  	<definition name="salesManagement/*.tiles"    				extends="sales-tiles">
+        <put-attribute name="content"							value="/WEB-INF/jsp/egovframework/example/salesManagement/{1}.jsp" />
+  	</definition>
+  	
+	<definition name="main-tiles" 								template="/WEB-INF/jsp/egovframework/example/cmmn/layout/main.jsp">
+	  	<put-attribute name="header"    						value="/WEB-INF/jsp/egovframework/example/cmmn/layout/header.jsp" />
+	  	<put-attribute name="loader"    						value="/WEB-INF/jsp/egovframework/example/cmmn/layout/loader.jsp" />
+	  	<put-attribute name="nav"    							value="/WEB-INF/jsp/egovframework/example/cmmn/layout/nav.jsp" />
+	  	<put-attribute name="top"    							value="/WEB-INF/jsp/egovframework/example/cmmn/layout/top.jsp" />
+	  	<put-attribute name="loginFormPopup"    				value="/WEB-INF/jsp/egovframework/example/cmmn/layout/loginFormPopup.jsp" />
+	  	<put-attribute name="content"   						value="" />
+	  	<put-attribute name="footer"    						value="/WEB-INF/jsp/egovframework/example/cmmn/layout/footer.jsp" />
+	</definition>
+	
+	<definition name="main/main.tiles" 							extends="main-tiles">
+	  	<put-attribute name="content"   						value="/WEB-INF/jsp/egovframework/example/main/main.jsp" />
+	</definition>
+	
+	<definition name="roomRegistration-tiles"       			template="/WEB-INF/jsp/egovframework/example/cmmn/layout/roomRegistrationLayout.jsp">
+        <put-attribute name="header"                			value="/WEB-INF/jsp/egovframework/example/cmmn/layout/header.jsp" />
+        <put-attribute name="nav"                   			value="/WEB-INF/jsp/egovframework/example/cmmn/layout/nav.jsp" />
+        <put-attribute name="top"                   			value="/WEB-INF/jsp/egovframework/example/cmmn/layout/top.jsp" />
+        <put-attribute name="loginFormPopup"    				value="/WEB-INF/jsp/egovframework/example/cmmn/layout/loginFormPopup.jsp" />
+        <put-attribute name="content"               			value="" />
+   	</definition>
+   	
+  	<definition name="roomRegistration/roomRegistration.tiles"	extends="roomRegistration-tiles">
+        <put-attribute name="content"                 			value="/WEB-INF/jsp/egovframework/example/roomRegistration/roomRegistration.jsp" />
+  	</definition>
+  	
+  	<definition name="roomSearch-tiles" 						template="/WEB-INF/jsp/egovframework/example/cmmn/layout/roomSearchLayout.jsp">
+	  	<put-attribute name="header"    						value="/WEB-INF/jsp/egovframework/example/cmmn/layout/header.jsp" />
+	  	<put-attribute name="nav"                   			value="/WEB-INF/jsp/egovframework/example/cmmn/layout/nav.jsp" />
+        <put-attribute name="top"                   			value="/WEB-INF/jsp/egovframework/example/cmmn/layout/top.jsp" />
+        <put-attribute name="loginFormPopup"    				value="/WEB-INF/jsp/egovframework/example/cmmn/layout/loginFormPopup.jsp" />
+	  	<put-attribute name="content"   						value="" />
+	</definition>
+	
+	<definition name="roomSearch/roomSearch.tiles" 				extends="roomSearch-tiles">
+	  	<put-attribute name="content"  							value="/WEB-INF/jsp/egovframework/example/roomSearch/roomSearch.jsp" />
+	</definition>
+	
+	<definition name="roomInfo-tiles" 							template="/WEB-INF/jsp/egovframework/example/cmmn/layout/roomInfoLayout.jsp">
+	  	<put-attribute name="header"    						value="/WEB-INF/jsp/egovframework/example/cmmn/layout/header.jsp" />
+	  	<put-attribute name="nav"    							value="/WEB-INF/jsp/egovframework/example/cmmn/layout/nav.jsp" />
+	  	<put-attribute name="top"    							value="/WEB-INF/jsp/egovframework/example/cmmn/layout/top.jsp" />
+	  	<put-attribute name="content"   						value="" />
+	  	<put-attribute name="footer"    						value="/WEB-INF/jsp/egovframework/example/cmmn/layout/footer.jsp" />
+	  	<put-attribute name="loginFormPopup"    				value="/WEB-INF/jsp/egovframework/example/cmmn/layout/loginFormPopup.jsp" />
+	  	<put-attribute name="callFormPopup"    					value="/WEB-INF/jsp/egovframework/example/cmmn/layout/callFormPopup.jsp" />
+	  	<put-attribute name="reportFormPopup"    				value="/WEB-INF/jsp/egovframework/example/cmmn/layout/reportFormPopup.jsp" />
+	</definition>
+	
+	<definition name="roomSearch/roomInfo.tiles" 				extends="roomInfo-tiles">
+	  	<put-attribute name="content"  							value="/WEB-INF/jsp/egovframework/example/roomSearch/roomInfo.jsp" />
+	</definition>
+	
+</tiles-definitions>
